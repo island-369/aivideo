@@ -1,0 +1,1 @@
+deepspeed --num_gpus=1 train_deepspeed.py --deepspeed_config ds_config.json

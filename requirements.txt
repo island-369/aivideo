@@ -1,0 +1,6 @@
+torch
+torchvision
+decord
+open-clip-torch
+tqdm
+numpy
