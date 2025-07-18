@@ -5,7 +5,7 @@
         "epochs":5,
         "batch_size":1,
         "learning_rate":1e-5,
-        "num_workers":1,
+        "num_workers":4,
         "model_save_path":"train_results/best_model.pth",
         "debug_subset_size": 10000 
     },
@@ -17,6 +17,11 @@
         "hidden_dim":256,
         "mlp_dim":512,
         "dropout":0.1
+    },
+    "test_config": {
+        "test_dir": "../data/test",
+        "model_path": "train_results/best_model.pth/pytorch_model.bin",
+        "output_path": "悲伤、龙少_视频检测赛_result.json"
     }
 
 }
