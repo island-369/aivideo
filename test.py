@@ -105,4 +105,4 @@ if __name__ == '__main__':
     with open('config.json', 'r') as f:
         main_config = json.load(f)
         
-    predict(main_config['model_config'], main_config['test_config'])
+    predict(main_config['model_config'], main_config['predict_config'])

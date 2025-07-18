@@ -18,7 +18,7 @@
         "mlp_dim":512,
         "dropout":0.1
     },
-    "test_config": {
+    "predict_config": {
         "test_dir": "../data/test",
         "model_path": "train_results/best_model.pth/pytorch_model.bin",
         "output_path": "悲伤、龙少_视频检测赛_result.json"

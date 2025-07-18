@@ -99,7 +99,7 @@ def main():
         progress_bar = tqdm(train_loader, desc=f"训练中 (Rank {args.local_rank})", disable=(args.local_rank > 0))
         for batch in progress_bar:
             if not batch or batch[0] is None: continue
-            frames, labels, mask, _ = batch # 忽略 video_ids
+            frames, labels, mask = batch 
             frames = frames.to(device=model_engine.device, dtype=model_dtype)
             labels = labels.to(model_engine.device)
             mask = mask.to(model_engine.device)
@@ -140,7 +140,7 @@ def main():
         with torch.no_grad():
             for batch in val_progress_bar:
                 if not batch or batch[0] is None: continue
-                frames, labels, mask, _ = batch # 忽略 video_ids
+                frames, labels, mask= batch 
                 frames = frames.to(device=model_engine.device, dtype=model_dtype)
                 labels = labels.to(model_engine.device)
                 mask = mask.to(model_engine.device)
